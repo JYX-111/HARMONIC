@@ -19,4 +19,15 @@ Create a conda environment using the provided configuration:
 
 ```bash
 conda env create -f environment.yaml
-conda activate ddpm-nm
+conda activate ccc
+
+### Requirements
+
+- Python ≥ 3.10
+- PyTorch 2.9.0 (CUDA 12.6)
+- Key dependencies:
+  - `numpy`, `scipy`, `pandas` — data processing / numerics
+  - `pyyaml` — configuration management
+  - `scikit-image` — morphology / image feature extraction
+  - `timm`, `huggingface-hub` — pretrained vision encoder loading
+  - `pillow`, `imageio`, `tifffile` — image I/O
