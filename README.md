@@ -126,4 +126,14 @@ If you use FOCUS in your research, please cite:
 
 ## Acknowledgments
 HARMONIC builds upon several excellent open-source projects:
-- GigaPath: [prov-gigapath/prov-gigapath](https://www.bing.com/search?q=prov-gigapath%2Fprov-gigapath&cvid=250c4ab19c454273bab25f880cc85e1a&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIGCAEQRRg6MgYIAhBFGDwyBwgDEOsHGECoAgCwAgA&FORM=ANAB01&adppc=EDGEESS&PC=ASTS&mkt=zh-CN)
+- GigaPath: [prov-gigapath/prov-gigapath](https://github.com/prov-gigapath/prov-gigapath)
+
+## Contact
+For questions and feedback:
+- Open an issue on GitHub
+- Email: xw405@cam.ac.uk
+
+---
+
+**Note:** This is research software. While we strive for correctness, please validate results for your specific application.  
+Contributions and feedback are welcome!
