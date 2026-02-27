@@ -20,6 +20,7 @@ Create a conda environment using the provided configuration:
 ```bash
 conda env create -f environment.yaml
 conda activate ccc
+```
 
 ### Requirements
 
