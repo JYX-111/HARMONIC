@@ -112,7 +112,7 @@ Outputs are saved to OUT_ROOT/dataset_id/sample_id/:
 - pred_edges.csv: Filtered results including src_cell_id、dst_cell_id、ligand、receptor、pathway、mechanism and score.
 
 ## Citation
-If you use FOCUS in your research, please cite:
+If you use HARMONIC in your research, please cite:
 ``` citation
 @article{wang2026histology,
   title={Histology-Aware Graph for Modeling Intercellular Communication in Spatial Transcriptomics},
