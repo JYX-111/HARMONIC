@@ -111,6 +111,11 @@ python main.py
 Outputs are saved to OUT_ROOT/dataset_id/sample_id/:
 - pred_edges.csv: Filtered results including src_cell_id、dst_cell_id、ligand、receptor、pathway、mechanism and score.
 
+### HARMONIC on one example
+
+&nbsp;&nbsp;For the **Human Ovary Cancer** region shown in **Figure 3** of our paper, we provide one corresponding HARMONIC model weight file. <br>
+&nbsp;&nbsp;The file is stored in Google One and can be accessed from the following link:[Google One link here].
+
 ## Citation
 If you use HARMONIC in your research, please cite:
 ``` citation
