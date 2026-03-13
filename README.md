@@ -114,7 +114,7 @@ Outputs are saved to OUT_ROOT/dataset_id/sample_id/:
 ### HARMONIC on one example
 
 &nbsp;&nbsp;For the **Human Ovary Cancer** region shown in **Figure 3** of our paper, we provide one corresponding HARMONIC model weight file. <br>
-&nbsp;&nbsp;The file is stored in Google One and can be accessed from the following link:[Google One link here].
+&nbsp;&nbsp;The file is stored in Google One and can be accessed from the following link:[https://drive.google.com/drive/folders/1UAy6AT9znP8tWUr6OXLcdKpDKMHU0Xfm?usp=sharing].
 
 ## Citation
 If you use HARMONIC in your research, please cite:
