@@ -68,6 +68,37 @@ Data should be log-normalized with gene-wise scaling. For H&E feature extraction
 
 - [Prov-GigaPath](https://github.com/prov-gigapath/prov-gigapath)
 
+### Systhetic Data and Validation
+
+#### Systhetic Data
+
+We constructed a synthetic spatial transcriptomics benchmark with paired H&E-like images to evaluate cell–cell communication (CCC) inference under controlled settings. A total of 20,000 cells were sampled and assigned to one of three cell categories: sender cells, receiver cells, and non-interacting cells. Sender cells were placed at the centers of multiple circular niches, receiver cells were arranged as concentric rings around the sender populations, and non-interacting cells filled the remaining background tissue regions.
+
+Gene expression was simulated for 50 genes in total, including 10 ligand genes, 10 receptor genes, and 40 noise genes. Baseline expression values were initialized from Gaussian noise. True ligand genes were activated in sender cells, and receiver cells within a spatial threshold of 50 pixels were allowed to interact with nearby sender cells. Once a sender cell was selected as an interacting partner, the corresponding receptor gene in the receiver cell was upregulated. For true ligand–receptor pairs, the expression effect size was sampled from `U(10, 20)`. In parallel, we generated a paired RGB H&E-like image with the same spatial layout, where sender cells, receiver cells, and non-interacting cells were represented by distinct colors to encode microenvironmental morphology.
+
+- Base Simulation Setting
+  The base simulation defines the canonical CCC setting without perturbation. Sender cells occupy niche centers, receiver cells form surrounding rings, and nearby sender–receiver pairs constitute candidate communication events. The synthetic H&E-like image preserves the same spatial organization as the simulated ST grid,          enabling joint evaluation of transcriptional and morphological information. This setting serves as the reference dataset for all downstream benchmark experiments.
+
+- False-Positive Benchmark: Barrier-Blocked Spurious Communication
+  To simulate false-positive CCC signals caused by spatial proximity but suppressed by microenvironmental barriers, we introduced barrier structures between sender and receiver regions in the H&E-like image. These barriers were visualized as dark boundaries, and their strength was sampled from `U(0, 1)`. As barrier strength       decreased, the barrier gradually faded and its inhibitory effect weakened.
+  Sender cells were still allowed to exhibit elevated expression of CCC-related ligand genes, but stronger barriers reduced both the probability and the effective strength of communication reaching receiver cells. In addition, barrier strength exerted a nonlinear modulation on receptor expression in nearby receiver cells. The     final receptor expression was modeled as:
+
+  `G_receiver = f1(G_sender) + β × f2(Strength_barrier) / d + noise`
+
+  where `d` denotes the spatial distance between sender and receiver cells.
+
+- False-Negative Benchmark: Communication Loss Under Weak Transcriptional Signal
+  To simulate false-negative CCC events caused by weak molecular evidence, sender and receiver cells were each divided into two subclasses: normal-expression cells and low-expression cells. Both subclasses remained capable of communication, but low-expression cells carried weaker transcriptional signals.
+  For normal-expression cells, highly expressed genes in true ligand–receptor pairs were sampled from `U(10, 20)`. For low-expression cells, the corresponding activated genes were sampled from `U(3, 7)`. In the paired H&E-like image, low-expression cells were displayed with reduced color intensity to reflect weakened molecular    activity.
+  We further introduced permissive scenarios with different strengths by adding grid-like texture patterns to the H&E-like image. The size and density of the texture varied across settings, providing additional microenvironmental cues. Grid density also exerted a nonlinear regulatory effect on receptor expression in receiver      cells. The final receptor expression was modeled as:
+  `G_receiver = f1(G_sender) + β × f2(Grid_density) + noise`
+
+#### Validation
+
+Based on the simulated datasets, we generated the corresponding ground-truth labels. For the False-Positive Benchmark and False-Negative Benchmark, we evaluated FPR and FNR, respectively. A total of 20 samples were used for evaluation, and the results were summarized using box plots.
+
+#### Tutorial
+
 ## Usage
 
 ### Running
