@@ -91,7 +91,8 @@ Gene expression was simulated for 50 genes in total, including 10 ligand genes, 
   To simulate false-negative CCC events caused by weak molecular evidence, sender and receiver cells were each divided into two subclasses: normal-expression cells and low-expression cells. Both subclasses remained capable of communication, but low-expression cells carried weaker transcriptional signals.
   For normal-expression cells, highly expressed genes in true ligand–receptor pairs were sampled from `U(10, 20)`. For low-expression cells, the corresponding activated genes were sampled from `U(3, 7)`. In the paired H&E-like image, low-expression cells were displayed with reduced color intensity to reflect weakened molecular    activity.
   We further introduced permissive scenarios with different strengths by adding grid-like texture patterns to the H&E-like image. The size and density of the texture varied across settings, providing additional microenvironmental cues. Grid density also exerted a nonlinear regulatory effect on receptor expression in receiver      cells. The final receptor expression was modeled as:
-  `G_receiver = f1(G_sender) + β × f2(Grid_density) + noise`
+
+   `G_receiver = f1(G_sender) + β × f2(Grid_density) + noise`
 
 #### Validation
 
