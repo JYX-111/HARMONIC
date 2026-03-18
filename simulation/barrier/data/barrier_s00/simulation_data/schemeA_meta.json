@@ -1,0 +1,101 @@
+{
+  "scheme": "A-circular-niches-with-gap-and-barrier-ring",
+  "seed": 7,
+  "scenario": "pure_white_bg_black_wavy_barrier_no_cells_on_barrier",
+  "strength": 0.0,
+  "params": {
+    "strength": 0.0,
+    "HIGH_MIN": 10.0,
+    "HIGH_MAX": 20.0,
+    "P_LIG_HIGH": 0.6,
+    "R_DECIDE": 60.0,
+    "SELECT_MAX": 3,
+    "GT_KEEP_PROB": 1.0,
+    "NOISE_SD": 0.25,
+    "SHAPE_ALPHA": 0.4,
+    "gap_inner": 8,
+    "gap_outer": 8,
+    "barrier_thick": 6,
+    "barrier_wave_amp": 2.0,
+    "barrier_wave_freq": 10
+  },
+  "H": 2501,
+  "W": 2501,
+  "niches": 5,
+  "n_cells": 20000,
+  "min_cell_sep_px": 4,
+  "niche_centers": [
+    [
+      2358,
+      1562
+    ],
+    [
+      143,
+      752
+    ],
+    [
+      715,
+      2181
+    ],
+    [
+      2278,
+      18
+    ],
+    [
+      1347,
+      910
+    ]
+  ],
+  "r_sender": [
+    199,
+    237,
+    221,
+    197,
+    181
+  ],
+  "gap_inner_px": 8,
+  "barrier_thick_px": 6,
+  "gap_outer_px": 8,
+  "r_out": [
+    424,
+    403,
+    319,
+    366,
+    307
+  ],
+  "tile_fixed": {
+    "TILE_SIZE_PX": 1041,
+    "TILE_PAD": 0
+  },
+  "background": {
+    "type": "pure_white"
+  },
+  "barrier_ring": {
+    "rgb": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "wave_amp_px": 2.0,
+    "wave_freq": 10,
+    "note": "barrier centered at r_sender + gap_inner + barrier_thick/2"
+  },
+  "palette": {
+    "F_sender": [
+      0.30000001192092896,
+      0.46000000834465027,
+      0.699999988079071
+    ],
+    "F_receiver": [
+      0.8199999928474426,
+      0.2199999988079071,
+      0.25999999046325684
+    ]
+  },
+  "edge_rule": "sender->receiver only; strength=1.0 forces 0 edges",
+  "mask_fixed_across_strength": true,
+  "pred_edges_id_contract": {
+    "src_cell_id/dst_cell_id": "LOCAL tile id (1..K)",
+    "src_global_id/dst_global_id": "GLOBAL id (0..N_CELLS-1)"
+  }
+}

@@ -1,0 +1,4 @@
+dataset_id,sample_id,src_idx,dst_idx,src_cell_id,dst_cell_id,ligand,receptor,pathway,mechanism,distance_px,coexpr,causal_score,strength,score
+simulation_data,sample1,528,1230,529,1231,LIG04,REC04,Synthetic,Secreted Signaling,44.0113639831543,2.486910104751587,0.5156405568122864,0.8783035278320312,1.0
+simulation_data,sample1,425,1230,426,1231,LIG04,REC04,Synthetic,Secreted Signaling,33.95585250854492,3.492583751678467,0.5156405568122864,0.8781421780586243,0.9999121427536011
+simulation_data,sample1,162,1230,163,1231,LIG04,REC04,Synthetic,Secreted Signaling,31.064449310302734,3.492583751678467,0.5156405568122864,0.8780355453491211,0.9998541474342346
