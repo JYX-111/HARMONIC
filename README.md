@@ -100,6 +100,8 @@ Based on the simulated datasets, we generated the corresponding ground-truth lab
 
 #### Tutorial
 
+Run the "run_all.sh" file in the corresponding folder to obtain the box plots and visualizations for the corresponding experiment.
+
 ## Usage
 
 ### Running
