@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.npy
+*.pt
+*.pth
+*.zip
+simulation/barrier/output/
+simulation/barrier/viz/
+simulation/barrier/data/
