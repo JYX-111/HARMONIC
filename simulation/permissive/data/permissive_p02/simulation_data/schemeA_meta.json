@@ -1,0 +1,81 @@
+{
+  "scheme": "A-circular-niches",
+  "seed": 7,
+  "permissive_strength": 0.2,
+  "permissive_params": {
+    "p": 0.2,
+    "diamond_period": 42,
+    "diamond_thickness": 2,
+    "brick_w": 62,
+    "brick_h": 30,
+    "mortar": 2,
+    "expr_scale": 0.56,
+    "HIGH_MIN": 5.6000000000000005,
+    "HIGH_MAX": 11.200000000000001,
+    "FN_HIGH_MIN": 1.6800000000000002,
+    "FN_HIGH_MAX": 3.9200000000000004,
+    "P_LIG_HIGH": 0.2,
+    "R_DECIDE": 60.0,
+    "SELECT_MAX": 1,
+    "GT_KEEP_PROB": 0.2,
+    "NOISE_SD": 0.10999999999999999,
+    "SHAPE_ALPHA": 0.176
+  },
+  "H": 2501,
+  "W": 2501,
+  "niches": 5,
+  "n_cells": 20000,
+  "min_cell_sep_px": 4,
+  "niche_centers": [
+    [
+      2358,
+      1562
+    ],
+    [
+      143,
+      752
+    ],
+    [
+      715,
+      2181
+    ],
+    [
+      2278,
+      18
+    ],
+    [
+      1347,
+      910
+    ]
+  ],
+  "r_in": [
+    199,
+    237,
+    221,
+    197,
+    181
+  ],
+  "r_out": [
+    402,
+    381,
+    297,
+    344,
+    285
+  ],
+  "ring_thickness": [
+    203,
+    144,
+    76,
+    147,
+    104
+  ],
+  "tile_fixed": {
+    "TILE_SIZE_PX": 1041,
+    "TILE_PAD": 0
+  },
+  "unified_grid_texture": {
+    "ONE_GRID": "diamond"
+  },
+  "mask_fixed_across_p": true,
+  "note": "geometry+mask fixed across p; only background texture + gene expression + gt_edges vary"
+}
